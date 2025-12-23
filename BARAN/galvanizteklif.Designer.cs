@@ -2,7 +2,7 @@
 
 namespace BARAN
 {
-    partial class galvaniz
+    partial class galvanizteklif
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -26,7 +26,6 @@ namespace BARAN
         private System.Windows.Forms.Label lbldolar;
         private System.Windows.Forms.TextBox txtdolar;
         private System.Windows.Forms.Button btnUrunSil;
-        private System.Windows.Forms.Button btnUrunDuzenle;
         private System.Windows.Forms.Button btnPdf;
         private System.Windows.Forms.Button btnGecmisTeklifler;
         private System.Windows.Forms.DataGridView dgvGecmisTeklifler;
@@ -39,35 +38,26 @@ namespace BARAN
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(galvaniz));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(galvanizteklif));
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
             this.btnIleri = new System.Windows.Forms.Button();
             this.pnlTeklif = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblKumulatifkarli = new System.Windows.Forms.Label();
+            this.btnKarli = new System.Windows.Forms.Button();
+            this.btnHesapla = new System.Windows.Forms.Button();
+            this.lblKumulatif = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvUrunler = new System.Windows.Forms.DataGridView();
-            this.colKaplama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKg = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTonbasi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTl = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUrunKaydet = new System.Windows.Forms.Button();
             this.cmbKaplama = new System.Windows.Forms.ComboBox();
             this.dgvGecmisTeklifler = new System.Windows.Forms.DataGridView();
             this.txtKg = new System.Windows.Forms.TextBox();
             this.btnUrunEkle = new System.Windows.Forms.Button();
             this.btnUrunSil = new System.Windows.Forms.Button();
-            this.btnUrunDuzenle = new System.Windows.Forms.Button();
             this.btnPdf = new System.Windows.Forms.Button();
             this.pnlDetay = new System.Windows.Forms.Panel();
             this.lblDetay = new System.Windows.Forms.Label();
@@ -89,6 +79,8 @@ namespace BARAN
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.pnlTeklif.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -116,21 +108,16 @@ namespace BARAN
             this.btnIleri.TabIndex = 2;
             this.btnIleri.Text = "Seç";
             this.btnIleri.UseVisualStyleBackColor = false;
-            this.btnIleri.Click += new System.EventHandler(this.btnIleri_Click);
             // 
             // pnlTeklif
             // 
             this.pnlTeklif.Controls.Add(this.pictureBox1);
-            this.pnlTeklif.Controls.Add(this.button2);
-            this.pnlTeklif.Controls.Add(this.label10);
-            this.pnlTeklif.Controls.Add(this.label7);
-            this.pnlTeklif.Controls.Add(this.label19);
-            this.pnlTeklif.Controls.Add(this.label14);
+            this.pnlTeklif.Controls.Add(this.lblKumulatifkarli);
+            this.pnlTeklif.Controls.Add(this.btnKarli);
+            this.pnlTeklif.Controls.Add(this.btnHesapla);
+            this.pnlTeklif.Controls.Add(this.lblKumulatif);
             this.pnlTeklif.Controls.Add(this.label13);
-            this.pnlTeklif.Controls.Add(this.button1);
             this.pnlTeklif.Controls.Add(this.label12);
-            this.pnlTeklif.Controls.Add(this.label8);
-            this.pnlTeklif.Controls.Add(this.label6);
             this.pnlTeklif.Controls.Add(this.label5);
             this.pnlTeklif.Controls.Add(this.label4);
             this.pnlTeklif.Controls.Add(this.dgvUrunler);
@@ -140,7 +127,6 @@ namespace BARAN
             this.pnlTeklif.Controls.Add(this.txtKg);
             this.pnlTeklif.Controls.Add(this.btnUrunEkle);
             this.pnlTeklif.Controls.Add(this.btnUrunSil);
-            this.pnlTeklif.Controls.Add(this.btnUrunDuzenle);
             this.pnlTeklif.Controls.Add(this.btnPdf);
             this.pnlTeklif.Controls.Add(this.pnlDetay);
             this.pnlTeklif.Location = new System.Drawing.Point(20, 270);
@@ -148,82 +134,59 @@ namespace BARAN
             this.pnlTeklif.Size = new System.Drawing.Size(1231, 462);
             this.pnlTeklif.TabIndex = 4;
             this.pnlTeklif.Visible = false;
-            this.pnlTeklif.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTeklif_Paint);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::BARAN.Properties.Resources.Adsız_tasarım__4_;
-            this.pictureBox1.Location = new System.Drawing.Point(672, 354);
+            this.pictureBox1.BackgroundImage = global::BARAN.Properties.Resources.Adsız_tasarım__4_;
+            this.pictureBox1.Location = new System.Drawing.Point(1016, 375);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 76);
-            this.pictureBox1.TabIndex = 34;
+            this.pictureBox1.Size = new System.Drawing.Size(212, 77);
+            this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
-            // button2
+            // lblKumulatifkarli
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.button2.Location = new System.Drawing.Point(1000, 426);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 28);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Yeni Teklif";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.lblKumulatifkarli.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblKumulatifkarli.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKumulatifkarli.Location = new System.Drawing.Point(702, 327);
+            this.lblKumulatifkarli.Name = "lblKumulatifkarli";
+            this.lblKumulatifkarli.Size = new System.Drawing.Size(265, 38);
+            this.lblKumulatifkarli.TabIndex = 32;
             // 
-            // label10
+            // btnKarli
             // 
-            this.label10.Location = new System.Drawing.Point(1076, 44);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 13);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "TL";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.btnKarli.Location = new System.Drawing.Point(534, 322);
+            this.btnKarli.Name = "btnKarli";
+            this.btnKarli.Size = new System.Drawing.Size(151, 38);
+            this.btnKarli.TabIndex = 31;
+            this.btnKarli.Text = "Teklif Fiyatı";
             // 
-            // label7
+            // btnHesapla
             // 
-            this.label7.Location = new System.Drawing.Point(943, 44);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
-            this.label7.TabIndex = 28;
-            this.label7.Text = "DOLAR";
+            this.btnHesapla.Location = new System.Drawing.Point(535, 286);
+            this.btnHesapla.Name = "btnHesapla";
+            this.btnHesapla.Size = new System.Drawing.Size(150, 30);
+            this.btnHesapla.TabIndex = 28;
+            this.btnHesapla.Text = "Kümülatif Maliyet";
             // 
-            // label19
+            // lblKumulatif
             // 
-            this.label19.Location = new System.Drawing.Point(731, 90);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(147, 15);
-            this.label19.TabIndex = 27;
-            this.label19.Text = "ORTALAMA TONBAŞI";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.IndianRed;
-            this.label14.Location = new System.Drawing.Point(1218, 441);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(13, 13);
-            this.label14.TabIndex = 23;
-            this.label14.Text = "5";
+            this.lblKumulatif.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lblKumulatif.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKumulatif.Location = new System.Drawing.Point(702, 285);
+            this.lblKumulatif.Name = "lblKumulatif";
+            this.lblKumulatif.Size = new System.Drawing.Size(265, 38);
+            this.lblKumulatif.TabIndex = 28;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.IndianRed;
-            this.label13.Location = new System.Drawing.Point(629, 207);
+            this.label13.Location = new System.Drawing.Point(1212, 245);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(13, 13);
             this.label13.TabIndex = 22;
             this.label13.Text = "4";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.Location = new System.Drawing.Point(1106, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 28);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Teklifi Kaydet";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label12
             // 
@@ -234,23 +197,6 @@ namespace BARAN
             this.label12.Size = new System.Drawing.Size(13, 13);
             this.label12.TabIndex = 17;
             this.label12.Text = "3";
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(731, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(177, 17);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "ORTALAMA TONBAŞI X TON";
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(731, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "TOTAL KDV DAHİL";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -267,52 +213,24 @@ namespace BARAN
             this.label4.Size = new System.Drawing.Size(99, 25);
             this.label4.TabIndex = 16;
             this.label4.Text = "Ürün Türü Seçiniz :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // dgvUrunler
             // 
             this.dgvUrunler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUrunler.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colKaplama,
-            this.colKg,
-            this.colTonbasi,
-            this.colTl});
-            this.dgvUrunler.Location = new System.Drawing.Point(12, 71);
+            this.dgvUrunler.Location = new System.Drawing.Point(17, 72);
             this.dgvUrunler.Name = "dgvUrunler";
-            this.dgvUrunler.Size = new System.Drawing.Size(500, 200);
+            this.dgvUrunler.Size = new System.Drawing.Size(1083, 200);
             this.dgvUrunler.TabIndex = 10;
-            this.dgvUrunler.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUrunler_CellContentClick);
-            // 
-            // colKaplama
-            // 
-            this.colKaplama.HeaderText = "Kaplama";
-            this.colKaplama.Name = "colKaplama";
-            // 
-            // colKg
-            // 
-            this.colKg.HeaderText = "Kg";
-            this.colKg.Name = "colKg";
-            // 
-            // colTonbasi
-            // 
-            this.colTonbasi.HeaderText = "Tonbaşı ($)";
-            this.colTonbasi.Name = "colTonbasi";
-            // 
-            // colTl
-            // 
-            this.colTl.HeaderText = "TL Karşılık";
-            this.colTl.Name = "colTl";
             // 
             // btnUrunKaydet
             // 
             this.btnUrunKaydet.BackColor = System.Drawing.Color.Cyan;
-            this.btnUrunKaydet.Location = new System.Drawing.Point(523, 192);
+            this.btnUrunKaydet.Location = new System.Drawing.Point(1106, 230);
             this.btnUrunKaydet.Name = "btnUrunKaydet";
             this.btnUrunKaydet.Size = new System.Drawing.Size(100, 28);
             this.btnUrunKaydet.TabIndex = 0;
-            this.btnUrunKaydet.Text = "Ürünleri Kaydet";
+            this.btnUrunKaydet.Text = "Teklifi Kaydet";
             this.btnUrunKaydet.UseVisualStyleBackColor = false;
-            this.btnUrunKaydet.Click += new System.EventHandler(this.btnUrunKaydet_Click);
             // 
             // cmbKaplama
             // 
@@ -331,7 +249,6 @@ namespace BARAN
             this.dgvGecmisTeklifler.Size = new System.Drawing.Size(305, 150);
             this.dgvGecmisTeklifler.TabIndex = 5;
             this.dgvGecmisTeklifler.Visible = false;
-            this.dgvGecmisTeklifler.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGecmisTeklifler_CellDoubleClick);
             // 
             // txtKg
             // 
@@ -349,33 +266,22 @@ namespace BARAN
             this.btnUrunEkle.TabIndex = 7;
             this.btnUrunEkle.Text = "Ürün Girişi";
             this.btnUrunEkle.UseVisualStyleBackColor = false;
-            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // btnUrunSil
             // 
-            this.btnUrunSil.Location = new System.Drawing.Point(523, 72);
+            this.btnUrunSil.Location = new System.Drawing.Point(1106, 144);
             this.btnUrunSil.Name = "btnUrunSil";
             this.btnUrunSil.Size = new System.Drawing.Size(100, 28);
             this.btnUrunSil.TabIndex = 9;
             this.btnUrunSil.Text = "Ürün Sil";
-            this.btnUrunSil.Click += new System.EventHandler(this.btnUrunSil_Click);
-            // 
-            // btnUrunDuzenle
-            // 
-            this.btnUrunDuzenle.Location = new System.Drawing.Point(523, 112);
-            this.btnUrunDuzenle.Name = "btnUrunDuzenle";
-            this.btnUrunDuzenle.Size = new System.Drawing.Size(100, 28);
-            this.btnUrunDuzenle.TabIndex = 10;
-            this.btnUrunDuzenle.Text = "Düzenle";
             // 
             // btnPdf
             // 
-            this.btnPdf.Location = new System.Drawing.Point(523, 152);
+            this.btnPdf.Location = new System.Drawing.Point(1106, 190);
             this.btnPdf.Name = "btnPdf";
             this.btnPdf.Size = new System.Drawing.Size(100, 28);
             this.btnPdf.TabIndex = 11;
             this.btnPdf.Text = "PDF Çıktısı";
-            this.btnPdf.Click += new System.EventHandler(this.btnPdf_Click);
             // 
             // pnlDetay
             // 
@@ -401,7 +307,7 @@ namespace BARAN
             this.lbldolar.Name = "lbldolar";
             this.lbldolar.Size = new System.Drawing.Size(100, 38);
             this.lbldolar.TabIndex = 0;
-            this.lbldolar.Text = "Dolar Kuru giriniz (virgülle)";
+            this.lbldolar.Text = "Dolar Kuru giriniz";
             // 
             // label2
             // 
@@ -451,7 +357,6 @@ namespace BARAN
             this.btnTeklifKaydet.TabIndex = 4;
             this.btnTeklifKaydet.Text = "Teklife Başla";
             this.btnTeklifKaydet.UseVisualStyleBackColor = false;
-            this.btnTeklifKaydet.Click += new System.EventHandler(this.btnTeklifKaydet_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -479,7 +384,6 @@ namespace BARAN
             this.btnGecmisTeklifler.Size = new System.Drawing.Size(150, 30);
             this.btnGecmisTeklifler.TabIndex = 3;
             this.btnGecmisTeklifler.Text = "Geçmiş Teklifleri Gör";
-            this.btnGecmisTeklifler.Click += new System.EventHandler(this.btnGecmisTeklifler_Click);
             // 
             // txtMusteriAra
             // 
@@ -504,7 +408,6 @@ namespace BARAN
             this.btnMusteriAra.Size = new System.Drawing.Size(100, 25);
             this.btnMusteriAra.TabIndex = 15;
             this.btnMusteriAra.Text = "Müşteri Ara";
-            this.btnMusteriAra.Click += new System.EventHandler(this.btnMusteriAra_Click);
             // 
             // label11
             // 
@@ -535,9 +438,26 @@ namespace BARAN
             this.label16.TabIndex = 25;
             this.label16.Text = "Müşteriye Tıklayıp Seç Tuşuna Basınız";
             // 
-            // galvaniz
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(817, 118);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 38);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Kar Marjı Giriniz";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(920, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 27;
+            // 
+            // galvanizteklif
             // 
             this.ClientSize = new System.Drawing.Size(1263, 744);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label11);
@@ -557,8 +477,8 @@ namespace BARAN
             this.Controls.Add(this.btnGecmisTeklifler);
             this.Controls.Add(this.pnlTeklif);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "galvaniz";
-            this.Text = "BARAN ÇELİK VE GALVANİZ SANAYİ LİMİTED ŞİRKETİ";
+            this.Name = "galvanizteklif";
+            this.Text = "Teklif Oluştur";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.pnlTeklif.ResumeLayout(false);
             this.pnlTeklif.PerformLayout();
@@ -586,23 +506,17 @@ namespace BARAN
 
         private Label label4;
         private Label label5;
-        private Label label8;
-        private Label label6;
         private Label label12;
         private Label label11;
         private Label label13;
-        private Button button1;
-        private Label label14;
         private Label label15;
-        private Label label10;
-        private Label label7;
-        private Label label19;
         private Label label16;
-        private Button button2;
-        private DataGridViewTextBoxColumn colKaplama;
-        private DataGridViewTextBoxColumn colKg;
-        private DataGridViewTextBoxColumn colTonbasi;
-        private DataGridViewTextBoxColumn colTl;
+        private Label label6;
+        private TextBox textBox1;
+        private Button btnHesapla;
+        private Label lblKumulatif;
+        private Label lblKumulatifkarli;
+        private Button btnKarli;
         private PictureBox pictureBox1;
     }
 }

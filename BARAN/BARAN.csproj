@@ -114,6 +114,12 @@
     <Compile Include="galvaniz.Designer.cs">
       <DependentUpon>galvaniz.cs</DependentUpon>
     </Compile>
+    <Compile Include="galvanizteklif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="galvanizteklif.Designer.cs">
+      <DependentUpon>galvanizteklif.cs</DependentUpon>
+    </Compile>
     <Compile Include="masterDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,11 +137,23 @@
     <Compile Include="ProductDetails.Designer.cs">
       <DependentUpon>ProductDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sarf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sarf.Designer.cs">
+      <DependentUpon>Sarf.cs</DependentUpon>
+    </Compile>
     <Compile Include="UrunAra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UrunAra.Designer.cs">
       <DependentUpon>UrunAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UrunSecimFormu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UrunSecimFormu.Designer.cs">
+      <DependentUpon>UrunSecimFormu.cs</DependentUpon>
     </Compile>
     <Compile Include="UserStoreSql.cs" />
     <Compile Include="Form1.cs">
@@ -154,9 +172,23 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="galvaniz.resx">
+      <DependentUpon>galvaniz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="galvanizteklif.resx">
+      <DependentUpon>galvanizteklif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="musteri.resx">
+      <DependentUpon>musteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDetails.resx">
+      <DependentUpon>ProductDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -168,8 +200,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Sarf.resx">
+      <DependentUpon>Sarf.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UrunAra.resx">
       <DependentUpon>UrunAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrunSecimFormu.resx">
+      <DependentUpon>UrunSecimFormu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="masterDataSet.xsc">
       <DependentUpon>masterDataSet.xsd</DependentUpon>

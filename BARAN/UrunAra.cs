@@ -487,5 +487,10 @@ ORDER BY Design, Sector, ProductType, StructureType, VoltageAyak, Foundation, To
         }
 
         #endregion
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

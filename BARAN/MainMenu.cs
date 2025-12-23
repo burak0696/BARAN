@@ -1,63 +1,106 @@
 ﻿using System;
-using System.Data.SqlClient;
-using System.Net.Http;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using HtmlAgilityPack;
 
 namespace BARAN
 {
     public partial class MainMenu : Form
     {
+        // 1. Parametresiz Yapıcı Metot
         public MainMenu()
         {
             InitializeComponent();
         }
 
+        // 2. Kullanıcı Adı Alan Yapıcı Metot (Login'den gelen)
+        public MainMenu(string user) : this()
+        {
+            // İsterseniz kullanıcı adını başlıkta gösterebilirsiniz
+            lblBaslik.Text = $"Hoşgeldiniz, Sayın {user} - Kontrol Paneli";
+        }
 
-        private void btnGalvaniz_Click(object sender, EventArgs e)
+        // --- BUTON OLAYLARI ---
+
+        // 1. Ürün Arama
+        private void btnUrunAra_Click(object sender, EventArgs e)
         {
             try
             {
-                using (var frm = new galvaniz())
-                {
-                    frm.StartPosition = FormStartPosition.CenterParent;
-                    frm.ShowDialog(this); // modal açılır
-                }
+                UrunAra urunForm = new UrunAra();
+                urunForm.ShowDialog();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Galvaniz formu açılamadı: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Form açılırken hata: " + ex.Message);
             }
         }
 
-
+        // 2. Müşteri Paneli
         private void btnMusteri_Click(object sender, EventArgs e)
         {
             try
             {
+                // Using bloğu form kapandığında kaynakları temizler
                 using (var frm = new musteri())
                 {
                     frm.StartPosition = FormStartPosition.CenterParent;
-                    frm.ShowDialog(this); // veya frm.Show(); isterseniz modeless açar
+                    frm.ShowDialog(this);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Müşteri formu açılamadı: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Müşteri formu hatası: " + ex.Message);
             }
         }
 
-        private void btnUrunAra_Click(object sender, EventArgs e)
+        // 3. Galvaniz Paneli
+        private void btnGalvaniz2_Click(object sender, EventArgs e)
         {
-            UrunAra urunForm = new UrunAra();
-            urunForm.ShowDialog();
+            try
+            {
+                using (var frm = new galvanizteklif())
+                {
+                    frm.StartPosition = FormStartPosition.CenterParent;
+                    frm.ShowDialog(this);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Galvaniz formu hatası: " + ex.Message);
+            }
         }
 
-        private void MainMenu_FormClosing(object sender, FormClosingEventArgs e)
+        // 4. Satın Alma (Sarf) Paneli
+        private void btnSatinalma_Click(object sender, EventArgs e)
         {
-            if (e.CloseReason == CloseReason.UserClosing) // sadece kullanıcı kapattıysa
-                Application.Exit(); // tüm uygulamayı kapat
+            try
+            {
+                // Sarf formunuzu (Sarf.cs) açar
+                using (var frm = new Sarf())
+                {
+                    frm.StartPosition = FormStartPosition.CenterParent;
+                    frm.ShowDialog(this);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Satın alma modülü hatası: " + ex.Message);
+            }
+        }
+
+        // 5. Çıkış Butonu
+        private void btnCikis_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // Form Kapanırken (X tuşu ile)
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                Application.Exit();
+            }
         }
     }
 }

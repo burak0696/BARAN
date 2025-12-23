@@ -39,11 +39,9 @@ namespace BARAN
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(galvaniz));
             this.dgvMusteriler = new System.Windows.Forms.DataGridView();
             this.btnIleri = new System.Windows.Forms.Button();
             this.pnlTeklif = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -91,7 +89,6 @@ namespace BARAN
             this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).BeginInit();
             this.pnlTeklif.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGecmisTeklifler)).BeginInit();
             this.pnlDetay.SuspendLayout();
@@ -120,7 +117,6 @@ namespace BARAN
             // 
             // pnlTeklif
             // 
-            this.pnlTeklif.Controls.Add(this.pictureBox1);
             this.pnlTeklif.Controls.Add(this.button2);
             this.pnlTeklif.Controls.Add(this.label10);
             this.pnlTeklif.Controls.Add(this.label7);
@@ -149,15 +145,6 @@ namespace BARAN
             this.pnlTeklif.TabIndex = 4;
             this.pnlTeklif.Visible = false;
             this.pnlTeklif.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTeklif_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::BARAN.Properties.Resources.Adsız_tasarım__4_;
-            this.pictureBox1.Location = new System.Drawing.Point(672, 354);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 76);
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
             // 
             // button2
             // 
@@ -556,13 +543,11 @@ namespace BARAN
             this.Controls.Add(this.btnTeklifKaydet);
             this.Controls.Add(this.btnGecmisTeklifler);
             this.Controls.Add(this.pnlTeklif);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "galvaniz";
-            this.Text = "BARAN ÇELİK VE GALVANİZ SANAYİ LİMİTED ŞİRKETİ";
+            this.Text = "Teklif Oluştur";
             ((System.ComponentModel.ISupportInitialize)(this.dgvMusteriler)).EndInit();
             this.pnlTeklif.ResumeLayout(false);
             this.pnlTeklif.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUrunler)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGecmisTeklifler)).EndInit();
             this.pnlDetay.ResumeLayout(false);
@@ -579,11 +564,11 @@ namespace BARAN
         private Label label1;
         private Label label3;
         private Button btnMusteriAra;
-
-
-
-
-
+            
+            
+            
+            
+            
         private Label label4;
         private Label label5;
         private Label label8;
@@ -603,6 +588,5 @@ namespace BARAN
         private DataGridViewTextBoxColumn colKg;
         private DataGridViewTextBoxColumn colTonbasi;
         private DataGridViewTextBoxColumn colTl;
-        private PictureBox pictureBox1;
     }
 }
